@@ -18,6 +18,7 @@ export const LoginForm = (props) => {
                     <Field component={"input"} name={"rememberMe"} type="checkbox" value="remember-me"/>{'Remember me'}
                 </label>
             </div>
+            {props.needCaptcha && <div><img src={props.captchaUrl} alt=""/> <Field component={"input"} name={"captcha"} type="text" /></div> }
             <button className="btn btn-lg btn-primary btn-block" type="submit">{'Sign in'}</button>
         </form>
     );

@@ -121,11 +121,9 @@ const usersReducer = (state = initialState, action) => { // на входе на
             return {...state, totalUsers: action.count}
         }
         case SET_LOADING_STATUS: {
-            // debugger;
             return {...state, isFetching: action.status}
         }
         case TOGGLE_IS_FOLLOWING_PROGRESS: {
-            // debugger;
             return {
                 ...state,
                 followingInProgress: action.status

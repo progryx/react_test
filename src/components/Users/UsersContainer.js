@@ -18,10 +18,10 @@ class UsersContainer extends React.Component {
     }
 
     componentDidMount() { // элемент ЖЦ, вызывается после отрисовки компоненты.
-        this.props.getUsers(this.props.currentPage, this.props.pageSize);
+        this.props.getUsers(this.props.currentPage, this.props.pageSize); // запрос списка пользователей
     }
 
-    onPageChanged = (page) => {
+    onPageChanged = (page) => { // при смене страницы запрос нового списка пользователей
         this.props.getUsers(page, this.props.pageSize);
     };
 
@@ -66,15 +66,3 @@ export default compose(
         })
 )(UsersContainer);
 
-
-
-
-// Запись  {
-//         follow,
-//         unfollow
-//     }
-// Эквивалентна
-// {
-//     follow: follow,
-//     unfollow: unfollow
-// }

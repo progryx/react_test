@@ -13,7 +13,7 @@ const ProfileInfo = (props) => {
         <div className="container card">
             <div className="card-body row">
 
-                <div className="col-4"><img className="card-img" src={props.profile.photos.large} alt=""/></div>
+                <div className="col-4"><img className="card-img" src={props.profile.photos.large ? props.profile.photos.large : 'https://bizraise.pro/wp-content/uploads/2014/09/no-avatar-300x300.png'} alt=""/></div>
                 <div className="col-8">
                     <ul className="list-group">
                         <li className="list-group-item">

@@ -22,13 +22,9 @@ class ProfileContainer extends React.Component{
     }
 }
 
-let AuthRedirectComponent = withAuthRedirect(ProfileContainer);
-
 let mapStateToProps = (state) => ({
     profile: state.profilePage.profile,
 });
-
-let WithUrlDataContainerComponent = withRouter(AuthRedirectComponent); // withrouter создает компоненту и закидывает в нее данные из URL
 
 export default compose(
     connect (mapStateToProps, {

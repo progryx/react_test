@@ -9,7 +9,7 @@ class DefaultContainer extends React.Component {
 
     render() {
         if (this.props.isAuth) {
-            return <Redirect to={"/profile"}/>
+            return <Redirect to={`/profile/${this.props.userId}`}/>
         } else {
             return <Redirect to={"/login"}/>
         }

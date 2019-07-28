@@ -5,7 +5,7 @@ import {Route} from "react-router-dom";
 // Компоненты и контейнеры
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
-import Navbar from './components/Navbar/Navbar.js';
+import NavbarContainer from './components/Navbar/NavbarContainer.js';
 import Settings from "./components/Settings/Settings";
 import UsersContainer from "./components/Users/UsersContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
@@ -30,7 +30,7 @@ const App = (props) => {
                     </div>
 
                     <div className="row">
-                        <div className="col-4"><Navbar/></div>
+                        <div className="col-4"><NavbarContainer/></div>
                         <div className="col-8">
                             <Route path="/" render ={ () =>  <DefaultContainer/>  }/>
                             <Route path="/profile/:userId?" render ={ () =>  <ProfileContainer/>  }/>
